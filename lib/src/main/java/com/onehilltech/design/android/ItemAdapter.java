@@ -108,19 +108,22 @@ public class ItemAdapter extends RecyclerView.Adapter <ItemAdapter.ViewHolder>
   @Override
   public ItemAdapter.ViewHolder onCreateViewHolder (ViewGroup parent, int viewType)
   {
-    return this.viewHolderFactories_.get (viewType).createViewHolder (parent);
+    ViewHolderFactory factory = this.viewHolderFactories_.get (viewType);
+    return factory.createViewHolder (parent);
   }
 
   @Override
   public void onBindViewHolder (ItemAdapter.ViewHolder holder, int position)
   {
-    holder.setItem (this.items_.get (position));
+    Item item = this.items_.get (position);
+    holder.setItem (item);
   }
 
   @Override
   public int getItemViewType (int position)
   {
-    return this.items_.get (position).getItemViewType ();
+    Item item = this.items_.get (position);
+    return item.getItemViewType ();
   }
 
   @Override
