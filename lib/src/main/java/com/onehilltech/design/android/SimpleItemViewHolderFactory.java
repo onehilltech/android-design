@@ -4,17 +4,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public abstract class SimpleViewHolderFactory implements ViewHolderFactory
+public abstract class SimpleItemViewHolderFactory implements ItemAdapter.ViewHolderFactory
 {
   private int layoutId_;
 
-  public SimpleViewHolderFactory (int layoutId)
+  public SimpleItemViewHolderFactory (int layoutId)
   {
     this.layoutId_ = layoutId;
   }
 
   @Override
-  public final BaseViewHolder createViewHolder (ViewGroup parent)
+  public final ItemAdapter.ViewHolder createViewHolder (ViewGroup parent)
   {
     LayoutInflater inflater = LayoutInflater.from (parent.getContext ());
     View view = inflater.inflate (this.layoutId_, parent, false);
@@ -22,5 +22,5 @@ public abstract class SimpleViewHolderFactory implements ViewHolderFactory
     return this.onCreateViewHolder (view);
   }
 
-  protected abstract BaseViewHolder onCreateViewHolder (View view);
+  protected abstract ItemAdapter.ViewHolder onCreateViewHolder (View view);
 }
