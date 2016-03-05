@@ -124,6 +124,12 @@ public class ItemAdapter extends RecyclerView.Adapter <ItemAdapter.ViewHolder>
   }
 
   @Override
+  public long getItemId (int position)
+  {
+    return position;
+  }
+
+  @Override
   public int getItemCount ()
   {
     return this.items_.size ();
