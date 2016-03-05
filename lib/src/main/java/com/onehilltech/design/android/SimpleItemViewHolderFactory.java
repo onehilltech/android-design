@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 
 public abstract class SimpleItemViewHolderFactory implements ItemAdapter.ViewHolderFactory
 {
-  private int layoutId_;
+  private final int layoutId_;
 
   public SimpleItemViewHolderFactory (int layoutId)
   {
