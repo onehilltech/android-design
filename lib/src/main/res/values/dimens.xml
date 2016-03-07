@@ -1,26 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <!-- floating action button -->
-    <dimen name="fab_interior_icon_height">24dp</dimen>
-    <dimen name="fab_interior_icon_width">24dp</dimen>
-    <dimen name="fab_height">56dp</dimen>
-    <dimen name="fab_width">56dp</dimen>
-    <dimen name="fab_mini_height">24dp</dimen>
-    <dimen name="fab_mini_width">24dp</dimen>
+    <dimen name="material_design_fab_interior_icon_height">24dp</dimen>
+    <dimen name="material_design_fab_interior_icon_width">24dp</dimen>
+    <dimen name="material_design_fab_height">56dp</dimen>
+    <dimen name="material_design_fab_width">56dp</dimen>
+    <dimen name="material_design_fab_mini_height">24dp</dimen>
+    <dimen name="material_design_fab_mini_width">24dp</dimen>
 
     <!-- grid list specs -->
-    <dimen name="grid_list_bar_padding">16dp</dimen>
-    <dimen name="grid_list_bar_padding_small_right">8dp</dimen>
+    <dimen name="material_design_grid_list_bar_padding">16dp</dimen>
+    <dimen name="material_design_grid_list_bar_padding_small_right">8dp</dimen>
 
-    <dimen name="grid_list_single_line_bar_height">48dp</dimen>
-    <dimen name="grid_list_single_line_bar_font">16sp</dimen>
+    <dimen name="material_design_grid_list_single_line_bar_height">48dp</dimen>
+    <dimen name="material_design_grid_list_single_line_bar_font">16sp</dimen>
 
-    <dimen name="grid_list_two_line_bar_height">64dp</dimen>
-    <dimen name="grid_list_two_line_bar_font_large_line1">16sp</dimen>
-    <dimen name="grid_list_two_line_bar_font_large_line2">12sp</dimen>
-    <dimen name="grid_list_two_line_bar_font_small_line1">14sp</dimen>
-    <dimen name="grid_list_two_line_bar_font_small_line2">14sp</dimen>
+    <dimen name="material_design_grid_list_two_line_bar_height">64dp</dimen>
+    <dimen name="material_design_grid_list_two_line_bar_font_large_line1">16sp</dimen>
+    <dimen name="material_design_grid_list_two_line_bar_font_large_line2">12sp</dimen>
+    <dimen name="material_design_grid_list_two_line_bar_font_small_line1">14sp</dimen>
+    <dimen name="material_design_grid_list_two_line_bar_font_small_line2">14sp</dimen>
 
-    <dimen name="grid_list_padding_large">4dp</dimen>
-    <dimen name="grid_list_padding_small">1dp</dimen>
+    <dimen name="material_design_grid_list_padding_large">4dp</dimen>
+    <dimen name="material_design_grid_list_padding_small">1dp</dimen>
 </resources>
