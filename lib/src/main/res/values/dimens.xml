@@ -7,6 +7,7 @@
     <dimen name="material_design_fab_width">56dp</dimen>
     <dimen name="material_design_fab_mini_height">24dp</dimen>
     <dimen name="material_design_fab_mini_width">24dp</dimen>
+    <dimen name="material_design_fab_margin">16dp</dimen>
 
     <!-- grid list specs -->
     <dimen name="material_design_grid_list_bar_padding">16dp</dimen>
