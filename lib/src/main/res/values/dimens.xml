@@ -24,4 +24,9 @@
 
     <dimen name="material_design_grid_list_padding_large">4dp</dimen>
     <dimen name="material_design_grid_list_padding_small">1dp</dimen>
+
+    <dimen name="material_design_dialog_content_margin_top">20dp</dimen>
+    <dimen name="material_design_dialog_content_margin_right">24dp</dimen>
+    <dimen name="material_design_dialog_content_margin_left">24dp</dimen>
+    <dimen name="material_design_dialog_content_margin_bottom">24dp</dimen>
 </resources>
