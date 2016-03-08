@@ -15,6 +15,6 @@ public class DialogUtils
     int bottomSpacing = r.getDimensionPixelSize (R.dimen.material_design_dialog_content_margin_bottom);
     int topSpacing = r.getDimensionPixelSize (R.dimen.material_design_dialog_content_margin_top);
 
-    builder.setView (view, leftSpacing, topSpacing, rightSpacing, bottomSpacing);
+    builder.setView (view, leftSpacing, 0, rightSpacing, 0);
   }
 }
