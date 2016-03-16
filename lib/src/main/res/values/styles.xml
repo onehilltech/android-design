@@ -1,0 +1,28 @@
+<resources>
+    <style name="MaterialDesign.Base"
+           parent="Theme.AppCompat.Light.DarkActionBar">
+
+        <!-- should we include the colorPrimary, colorPrimaryDark, and colorAccent here -->
+
+    </style>
+
+    <!-- reset the base name for inheritance -->
+    <style name="MaterialDesign"
+           parent="MaterialDesign.Base" />
+
+    <!-- define each of the inherited styles -->
+
+    <style name="MaterialDesign.NoActionBar">
+        <item name="windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+    </style>
+
+    <style name="MaterialDesign.NoActionBar.TransparentStatusBar" />
+
+    <style name="MaterialDesign.AppBarOverlay"
+           parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="MaterialDesign.PopupOverlay"
+           parent="ThemeOverlay.AppCompat.Light" />
+
+</resources>
