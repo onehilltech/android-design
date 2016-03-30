@@ -47,7 +47,7 @@ public class ActivityResultHandler
 
     /**
      * Initializing constructor.
-     * 
+     *
      * @param resultCode
      */
     public OnCustomActivityResultListener (int resultCode)
