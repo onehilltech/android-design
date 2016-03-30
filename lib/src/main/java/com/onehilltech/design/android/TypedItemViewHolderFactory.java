@@ -15,8 +15,8 @@ public class TypedItemViewHolderFactory <T extends ItemAdapter.ViewHolder>
   {
     super (layoutId);
 
-    if ((clazz.getModifiers () & Modifier.STATIC) != 0)
-      throw new IllegalArgumentException ("Class cannot be static");
+    if ((clazz.getModifiers () & Modifier.STATIC) == 0)
+      throw new IllegalArgumentException ("ViewHolder must be a static class");
 
     this.clazz_ = clazz;
   }
