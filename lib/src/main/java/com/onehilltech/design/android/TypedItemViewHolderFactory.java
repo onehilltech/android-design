@@ -4,7 +4,6 @@ import android.support.annotation.NonNull;
 import android.view.View;
 
 import java.lang.reflect.Constructor;
-import java.lang.reflect.Modifier;
 
 public class TypedItemViewHolderFactory <T extends ItemAdapter.ViewHolder>
     extends SimpleItemViewHolderFactory
@@ -14,9 +13,6 @@ public class TypedItemViewHolderFactory <T extends ItemAdapter.ViewHolder>
   public TypedItemViewHolderFactory (int layoutId, @NonNull Class <T> clazz)
   {
     super (layoutId);
-
-    if ((clazz.getModifiers () & Modifier.STATIC) == 0)
-      throw new IllegalArgumentException ("ViewHolder must be a static class");
 
     this.clazz_ = clazz;
   }
