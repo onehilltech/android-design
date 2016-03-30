@@ -22,7 +22,8 @@ public class ActivityResultHandler
    * Listener for handling standard result codes from an activity. The standard result
    * codes are Activity.RESULT_OK and Activity.RESULT_CANCELED.
    */
-  public abstract class OnStandardActivityResultListener implements OnActivityResultListener
+  public static abstract class OnStandardActivityResultListener
+      implements OnActivityResultListener
   {
     @Override
     public final void onResult (int resultCode, @Nullable Intent data)
@@ -41,7 +42,8 @@ public class ActivityResultHandler
    * Listener for handling custom result codes for results from an activity. A
    * custom result code is any result code that starts after Activity.RESULT_FIRST_USER.
    */
-  public abstract class OnCustomActivityResultListener implements OnActivityResultListener
+  public static abstract class OnCustomActivityResultListener
+      implements OnActivityResultListener
   {
     private int resultCode_;
 
