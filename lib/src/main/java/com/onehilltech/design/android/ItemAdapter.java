@@ -94,6 +94,16 @@ public class ItemAdapter extends RecyclerView.Adapter <ItemAdapter.ViewHolder>
     this.items_.add (position, item);
   }
 
+  public void setItem (int position, Item item)
+  {
+    this.items_.set (position, item);
+  }
+
+  public Item removeItem (int position)
+  {
+    return this.items_.remove (position);
+  }
+
   /**
    * Get an item from the adapter.
    *
