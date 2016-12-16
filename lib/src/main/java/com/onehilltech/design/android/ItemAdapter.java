@@ -38,7 +38,7 @@ public class ItemAdapter extends RecyclerView.Adapter <ItemAdapter.ViewHolder>
       this.data_ = data;
     }
 
-    public T getDate ()
+    public T getData ()
     {
       return this.data_;
     }
