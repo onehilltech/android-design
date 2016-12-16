@@ -12,38 +12,66 @@ public class ItemAdapter extends RecyclerView.Adapter <ItemAdapter.ViewHolder>
   /**
    * Base class for all Item types managed by the ItemAdapter.
    */
-  public static abstract class Item
+  public static class Item <T>
   {
+    private int itemViewType_;
+
+    private T data_;
+
+    public Item (int itemViewType)
+    {
+      this.itemViewType_ = itemViewType;
+    }
+
     /**
      * Get the view type for the Item.
      *
      * @return
      */
-    public abstract int getItemViewType ();
+    public int getItemViewType ()
+    {
+      return this.itemViewType_;
+    }
+
+    public void setData (T data)
+    {
+      this.data_ = data;
+    }
+
+    public T getDate ()
+    {
+      return this.data_;
+    }
   }
 
   /**
    * Implementation of the ViewHolder class for this RecyclerView.Adapter.
    */
-  public static class ViewHolder extends RecyclerView.ViewHolder
+  public static class ViewHolder <T> extends RecyclerView.ViewHolder
   {
     /// Item managed by the view holder.
-    protected Item item_;
+    protected T item_;
 
     public ViewHolder (View itemView)
     {
-      this (itemView, null);
-    }
-
-    public ViewHolder (View itemView, Item item)
-    {
       super (itemView);
-      this.item_ = item;
     }
 
+    @SuppressWarnings ("unchecked")
     public void setItem (Item item)
     {
+      this.item_ = (T)item;
+      this.onSetItem ((T)item);
+    }
+
+    protected void onSetItem (T item)
+    {
       this.item_ = item;
+    }
+
+    public T getItem ()
+    {
+      return this.item_;
     }
   }
 
