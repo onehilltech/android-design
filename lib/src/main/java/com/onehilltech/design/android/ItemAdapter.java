@@ -47,29 +47,22 @@ public class ItemAdapter extends RecyclerView.Adapter <ItemAdapter.ViewHolder>
   /**
    * Implementation of the ViewHolder class for this RecyclerView.Adapter.
    */
-  public static class ViewHolder <T> extends RecyclerView.ViewHolder
+  public static class ViewHolder <T extends Item> extends RecyclerView.ViewHolder
   {
     /// Item managed by the view holder.
-    protected T item_;
+    private Item item_;
 
     public ViewHolder (View itemView)
     {
       super (itemView);
     }
 
-    @SuppressWarnings ("unchecked")
     public void setItem (Item item)
-    {
-      this.item_ = (T)item;
-      this.onSetItem ((T)item);
-    }
-
-    protected void onSetItem (T item)
     {
       this.item_ = item;
     }
 
-    public T getItem ()
+    public Item getItem ()
     {
       return this.item_;
     }
