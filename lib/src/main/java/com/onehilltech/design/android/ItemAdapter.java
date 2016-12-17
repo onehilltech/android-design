@@ -126,6 +126,17 @@ public class ItemAdapter extends RecyclerView.Adapter <ItemAdapter.ViewHolder>
   }
 
   /**
+   * Get the position of an item.
+   * 
+   * @param item
+   * @return
+   */
+  public int getPosition (Item item)
+  {
+    return this.items_.indexOf (item);
+  }
+
+  /**
    * Get an item from the adapter.
    *
    * @param position
