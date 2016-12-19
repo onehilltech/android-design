@@ -127,7 +127,7 @@ public class ItemAdapter extends RecyclerView.Adapter <ItemAdapter.ViewHolder>
 
   /**
    * Get the position of an item.
-   * 
+   *
    * @param item
    * @return
    */
