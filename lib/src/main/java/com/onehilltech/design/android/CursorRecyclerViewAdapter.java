@@ -32,6 +32,9 @@ public abstract class CursorRecyclerViewAdapter <VH extends RecyclerView.ViewHol
 
     if (this.cursor_ != null)
       this.cursor_.registerDataSetObserver (this.dataSetObserver_);
+
+    // Mark the adapter has having stable ids.
+    this.setHasStableIds (true);
   }
 
   public Context getContext ()

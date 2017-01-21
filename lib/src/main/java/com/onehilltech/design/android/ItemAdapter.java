@@ -14,12 +14,28 @@ public class ItemAdapter extends RecyclerView.Adapter <ItemAdapter.ViewHolder>
    */
   public static class Item <T>
   {
+    /// The item type.
     private int itemViewType_;
 
+    /// The data contained in the item.
     private T data_;
 
+    /// Unique id for the item.
+    private long itemId_;
+
+    /**
+     * Initializing constructor.
+     *
+     * @param itemViewType      View type of the item
+     */
     public Item (int itemViewType)
     {
+      this (RecyclerView.NO_ID, itemViewType);
+    }
+
+    public Item (long itemId, int itemViewType)
+    {
+      this.itemId_ = itemId;
       this.itemViewType_ = itemViewType;
     }
 
@@ -33,14 +49,34 @@ public class ItemAdapter extends RecyclerView.Adapter <ItemAdapter.ViewHolder>
       return this.itemViewType_;
     }
 
+    /**
+     * Set the data contained in the item.
+     *
+     * @param data
+     */
     public void setData (T data)
     {
       this.data_ = data;
     }
 
+    /**
+     * Get the data contained in the item.
+     *
+     * @return
+     */
     public T getData ()
     {
       return this.data_;
+    }
+
+    /**
+     * Get the id of the item.
+     *
+     * @return
+     */
+    public long getItemId ()
+    {
+      return this.itemId_;
     }
   }
 
@@ -50,21 +86,28 @@ public class ItemAdapter extends RecyclerView.Adapter <ItemAdapter.ViewHolder>
   public static class ViewHolder <T extends Item> extends RecyclerView.ViewHolder
   {
     /// Item managed by the view holder.
-    private Item item_;
+    private T item_;
 
     public ViewHolder (View itemView)
     {
       super (itemView);
     }
 
-    public void setItem (Item item)
-    {
-      this.item_ = item;
-    }
-
-    public Item getItem ()
+    public T getItem ()
     {
       return this.item_;
+    }
+
+    @SuppressWarnings ("unchecked")
+    public final void setItem (Item item)
+    {
+      this.item_ = (T)item;
+      this.onItemChanged (this.item_);
+    }
+
+    public void onItemChanged (T item)
+    {
+
     }
   }
 
@@ -171,7 +214,8 @@ public class ItemAdapter extends RecyclerView.Adapter <ItemAdapter.ViewHolder>
   @Override
   public long getItemId (int position)
   {
-    return position;
+    long itemId = this.items_.get (position).getItemId ();
+    return itemId != -1 ? itemId : position;
   }
 
   @Override
