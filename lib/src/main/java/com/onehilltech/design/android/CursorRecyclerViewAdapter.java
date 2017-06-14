@@ -27,7 +27,7 @@ public abstract class CursorRecyclerViewAdapter <VH extends RecyclerView.ViewHol
 
   public CursorRecyclerViewAdapter (Context context, Cursor cursor)
   {
-    this (context, null, "_id");
+
   }
 
   public CursorRecyclerViewAdapter (Context context, Cursor cursor, String idField)
@@ -37,13 +37,10 @@ public abstract class CursorRecyclerViewAdapter <VH extends RecyclerView.ViewHol
     this.dataValid_ = cursor != null;
     this.idFieldName_ = idField;
 
-    this.idIndex_ = this.cursor_ != null ? this.cursor_.getColumnIndex (this.idFieldName_) : -1;
+    this.idIndex_ = this.cursor_ != null ? this.cursor_.getColumnIndex ("_id") : -1;
 
     if (this.cursor_ != null)
       this.cursor_.registerDataSetObserver (this.dataSetObserver_);
-
-    // Mark the adapter has having stable ids.
-    this.setHasStableIds (true);
   }
 
   public String getIdFieldName ()
