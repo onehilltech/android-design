@@ -73,12 +73,6 @@ public abstract class CursorRecyclerViewAdapter <VH extends RecyclerView.ViewHol
             position;
   }
 
-  @Override
-  public void setHasStableIds (boolean hasStableIds)
-  {
-    super.setHasStableIds (true);
-  }
-
   public abstract void onBindViewHolder (VH viewHolder, Cursor cursor);
 
   @Override
