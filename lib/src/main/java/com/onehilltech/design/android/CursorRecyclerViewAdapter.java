@@ -68,7 +68,7 @@ public abstract class CursorRecyclerViewAdapter <VH extends RecyclerView.ViewHol
   public long getItemId (int position)
   {
     return
-        this.dataValid_ && this.cursor_ != null && this.cursor_.moveToPosition (position) ?
+        this.dataValid_ && this.cursor_ != null && this.idIndex_ != -1 && this.cursor_.moveToPosition (position) ?
             this.cursor_.getLong (this.idIndex_) :
             position;
   }
