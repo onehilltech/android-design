@@ -18,6 +18,8 @@ public abstract class CursorRecyclerViewAdapter <VH extends RecyclerView.ViewHol
 
   private final DataSetObserver dataSetObserver_ = new MyDataSetObserver ();
 
+  private final String idFieldName_;
+
   public CursorRecyclerViewAdapter (Context context)
   {
     this (context, null);
@@ -25,16 +27,28 @@ public abstract class CursorRecyclerViewAdapter <VH extends RecyclerView.ViewHol
 
   public CursorRecyclerViewAdapter (Context context, Cursor cursor)
   {
+    this (context, null, "_id");
+  }
+
+  public CursorRecyclerViewAdapter (Context context, Cursor cursor, String idField)
+  {
     this.context_ = context;
     this.cursor_ = cursor;
     this.dataValid_ = cursor != null;
-    this.idIndex_ = this.cursor_ != null ? this.cursor_.getColumnIndex ("_id") : -1;
+    this.idFieldName_ = idField;
+
+    this.idIndex_ = this.cursor_ != null ? this.cursor_.getColumnIndex (this.idFieldName_) : -1;
 
     if (this.cursor_ != null)
       this.cursor_.registerDataSetObserver (this.dataSetObserver_);
 
     // Mark the adapter has having stable ids.
     this.setHasStableIds (true);
+  }
+
+  public String getIdFieldName ()
+  {
+    return this.idFieldName_;
   }
 
   public Context getContext ()
