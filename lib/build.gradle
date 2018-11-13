@@ -16,7 +16,7 @@ android {
         versionName = project.property('build.version')
 
         testApplicationId "com.onehilltech.design.android.test"
-        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
 
         multiDexEnabled  true
     }
@@ -43,9 +43,10 @@ android {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.12'
+    api 'com.google.android.material:material:1.0.0'
+    api 'androidx.appcompat:appcompat:1.0.2'
 
-    compile 'com.google.guava:guava:22.0'
-    compile 'com.android.support:appcompat-v7:27.1.0'
-    compile 'com.android.support:design:27.1.0'
+    implementation 'com.google.guava:guava:24.1-jre'
+
+    testImplementation 'junit:junit:4.12'
 }

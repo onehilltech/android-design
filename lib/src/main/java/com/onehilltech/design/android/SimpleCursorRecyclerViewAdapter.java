@@ -2,12 +2,13 @@ package com.onehilltech.design.android;
 
 import android.content.Context;
 import android.database.Cursor;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import java.lang.reflect.Constructor;
+
+import androidx.recyclerview.widget.RecyclerView;
 
 public class SimpleCursorRecyclerViewAdapter <VH extends SimpleCursorRecyclerViewAdapter.CursorViewHolder>
     extends CursorRecyclerViewAdapter<VH>

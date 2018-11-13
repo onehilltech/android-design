@@ -1,8 +1,9 @@
 package com.onehilltech.design.android;
 
 import android.content.res.Resources;
-import android.support.v7.app.AlertDialog;
 import android.view.View;
+
+import androidx.appcompat.app.AlertDialog;
 
 @SuppressWarnings ("unused")
 public class DialogUtils

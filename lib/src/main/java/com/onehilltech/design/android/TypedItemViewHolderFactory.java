@@ -1,9 +1,10 @@
 package com.onehilltech.design.android;
 
-import android.support.annotation.NonNull;
 import android.view.View;
 
 import java.lang.reflect.Constructor;
+
+import androidx.annotation.NonNull;
 
 public class TypedItemViewHolderFactory <T extends ItemAdapter.ViewHolder>
     extends SimpleItemViewHolderFactory

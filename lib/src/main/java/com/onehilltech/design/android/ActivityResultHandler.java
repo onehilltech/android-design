@@ -2,10 +2,11 @@ package com.onehilltech.design.android;
 
 import android.app.Activity;
 import android.content.Intent;
-import android.support.annotation.Nullable;
 
 import com.google.common.collect.HashMultimap;
 import com.google.common.collect.Multimap;
+
+import androidx.annotation.Nullable;
 
 public class ActivityResultHandler
 {
